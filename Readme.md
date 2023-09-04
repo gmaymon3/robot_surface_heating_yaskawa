@@ -1,0 +1,1 @@
+Colab notebook for learning k values for graph based thermal model.
