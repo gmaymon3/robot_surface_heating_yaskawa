@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="/* pkg_name */" type="/* exec_name */" name="/* node_name */" output="screen"/>
+</launch>
