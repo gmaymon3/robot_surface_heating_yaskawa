@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: motoman_gp12_support
+    relative_path: urdf/gp12.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/motoman_gp12.srdf
+  CONFIG:
+    author_name: Zach
+    author_email: zach@zach.com
+    generated_timestamp: 1692900773
