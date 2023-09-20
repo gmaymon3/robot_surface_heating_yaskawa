@@ -1,0 +1,5 @@
+motoman/motoman_resources
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman_resources/cmake.lock /home/cam/Documents/GitHub/robot_surface_heating/devel/./cmake.lock
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman_resources/share/motoman_resources/cmake/motoman_resourcesConfig-version.cmake /home/cam/Documents/GitHub/robot_surface_heating/devel/share/motoman_resources/cmake/motoman_resourcesConfig-version.cmake
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman_resources/share/motoman_resources/cmake/motoman_resourcesConfig.cmake /home/cam/Documents/GitHub/robot_surface_heating/devel/share/motoman_resources/cmake/motoman_resourcesConfig.cmake
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman_resources/lib/pkgconfig/motoman_resources.pc /home/cam/Documents/GitHub/robot_surface_heating/devel/lib/pkgconfig/motoman_resources.pc

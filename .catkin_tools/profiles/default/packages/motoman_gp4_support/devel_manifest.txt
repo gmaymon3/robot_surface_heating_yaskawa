@@ -1,0 +1,5 @@
+motoman/motoman_gp4_support
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman_gp4_support/cmake.lock /home/cam/Documents/GitHub/robot_surface_heating/devel/./cmake.lock
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman_gp4_support/share/motoman_gp4_support/cmake/motoman_gp4_supportConfig.cmake /home/cam/Documents/GitHub/robot_surface_heating/devel/share/motoman_gp4_support/cmake/motoman_gp4_supportConfig.cmake
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman_gp4_support/share/motoman_gp4_support/cmake/motoman_gp4_supportConfig-version.cmake /home/cam/Documents/GitHub/robot_surface_heating/devel/share/motoman_gp4_support/cmake/motoman_gp4_supportConfig-version.cmake
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman_gp4_support/lib/pkgconfig/motoman_gp4_support.pc /home/cam/Documents/GitHub/robot_surface_heating/devel/lib/pkgconfig/motoman_gp4_support.pc

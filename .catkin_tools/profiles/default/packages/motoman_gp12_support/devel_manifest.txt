@@ -1,0 +1,5 @@
+motoman/motoman_gp12_support
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman_gp12_support/cmake.lock /home/cam/Documents/GitHub/robot_surface_heating/devel/./cmake.lock
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman_gp12_support/share/motoman_gp12_support/cmake/motoman_gp12_supportConfig-version.cmake /home/cam/Documents/GitHub/robot_surface_heating/devel/share/motoman_gp12_support/cmake/motoman_gp12_supportConfig-version.cmake
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman_gp12_support/share/motoman_gp12_support/cmake/motoman_gp12_supportConfig.cmake /home/cam/Documents/GitHub/robot_surface_heating/devel/share/motoman_gp12_support/cmake/motoman_gp12_supportConfig.cmake
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman_gp12_support/lib/pkgconfig/motoman_gp12_support.pc /home/cam/Documents/GitHub/robot_surface_heating/devel/lib/pkgconfig/motoman_gp12_support.pc

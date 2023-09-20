@@ -1,0 +1,2 @@
+motoman/motoman
+/home/cam/Documents/GitHub/robot_surface_heating/devel/.private/motoman/cmake.lock /home/cam/Documents/GitHub/robot_surface_heating/devel/./cmake.lock
