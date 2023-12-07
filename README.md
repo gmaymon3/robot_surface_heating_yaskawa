@@ -1,5 +1,5 @@
 # To open Rviz
-cd ~/Documents/GitHub/robot_surface_heating
+cd ~/Documents/GitHub/robot_surface_heating <br>
 source devel/setup.bash
 roslaunch movement py_launch_heater.launch 
 
