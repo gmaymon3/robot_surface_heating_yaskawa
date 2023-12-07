@@ -8,4 +8,4 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: gabe
     author_email: gabe@gabe.com
-    generated_timestamp: 1694737646
+    generated_timestamp: 1695329713
