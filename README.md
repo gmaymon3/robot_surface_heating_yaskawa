@@ -17,15 +17,7 @@ source devel/setup.bash
 rosrun test_exec transform-grid-uvc-radiometry-lab.py
 
 
-# NOTE: YOU MAY NEED TO UNPLUG AND PLUG THE CAMERA IF THERE IS A UVC ERROR
+# NOTE: 
+YOU MAY NEED TO UNPLUG AND PLUG THE CAMERA IF THERE IS A UVC ERROR
 
-
-Open new tab
-source devel/setup.bash
-Open new tab
-cd ~/Documents/GitHub/robot_surface_heating/src/purethermal1-uvc-capture/python
-sudo python3 transform-grid-uvc-radiometry.py
-sudo chmod +x transform-grid-uvc-radiometry.py
-
-rosrun purethermal1-uvc-capture transform-grid-uvc-radiometry.py
 
