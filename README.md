@@ -5,10 +5,14 @@ There are 4 packages needed.
 - motoman
 - heater_moveit_config
 
-The thermal camera contains drivers and scripts for the thermal camera 
-The robot move scripts contains the launch files and python move scripts for running the robot 
-The motoman conatins the gp12 config and drivers needed for the yaskawa 
-the heater moveit config contains the files generated for the rviz config for the yaskawa 
+The thermal camera contains drivers and scripts for the thermal camera <br>
+The robot move scripts contains the launch files and python move scripts for running the robot <br>
+The motoman conatins the gp12 config and drivers needed for the yaskawa <br>
+the heater moveit config contains the files generated for the rviz config for the yaskawa <br>
+
+## For Camera Calibration
+Place cold washer on the corner of the carbon fiber sheet. Run uvc-radiometry.py. This code will record the coldest temperature location. Take this location and record it in the 
+section of code that states # CALIBRATE THESE VALUES FOR PERSPECTIVE TRANSFORM #. Do this for each corner of the sheet. 
 
 ## For Coldest Node Movement
 
