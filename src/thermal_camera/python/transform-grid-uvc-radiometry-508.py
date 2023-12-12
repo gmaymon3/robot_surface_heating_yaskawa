@@ -140,7 +140,6 @@ def main():
       if res < 0:
         print("uvc_start_streaming failed: {0}".format(res))
         exit(1)
-      
       # Generate random X and Y coordinates with variable spacing
       # Define the range and spacing for X and Y values
       x_start = 0
