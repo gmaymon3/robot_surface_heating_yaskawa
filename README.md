@@ -1,3 +1,15 @@
+## Package Break Down 
+There are 4 packages needed. 
+- thermal_camera
+- robot_move_scripts
+- motoman
+- heater_moveit_config
+
+The thermal camera contains drivers and scripts for the thermal camera 
+The robot move scripts contains the launch files and python move scripts for running the robot 
+The motoman conatins the gp12 config and drivers needed for the yaskawa 
+the heater moveit config contains the files generated for the rviz config for the yaskawa 
+
 # To open Rviz
 cd ~/Documents/GitHub/robot_surface_heating <br>
 source devel/setup.bash <br>
