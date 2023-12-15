@@ -35,4 +35,8 @@ rosrun robot_move_scripts heat_to_Xdeg_cold_node_move_group_python_interface.py 
 
 # NOTE: YOU MAY NEED TO UNPLUG AND PLUG THE CAMERA IF THERE IS A UVC ERROR
 
+move_group_python_interface_tutorial.py is random policy <br>
+cold_node is heating the coldest node for X seconds <br>
+heat_to_Xdeg is heating the coldest node to X temp <br>
+
 
