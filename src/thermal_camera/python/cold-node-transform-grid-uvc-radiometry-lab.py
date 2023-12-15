@@ -158,10 +158,12 @@ def main():
       # Create equally spaced points along X and Y axes
       x_values = np.arange(x_start, x_end, x_spacing)
       y_values = np.arange(y_start, y_end, y_spacing)
-      x_values = np.delete(x_values, 0)
-      y_values = np.delete(y_values, 0)
-      #x_values = np.append(x_values,[999])
-      #y_values = np.append(y_values,[999])
+
+      # Add a value 999 at the end for edges
+      #x_values = np.delete(x_values, 0)
+      #y_values = np.delete(y_values, 0)
+      x_values = np.append(x_values,[999])
+      y_values = np.append(y_values,[999])
 
       # Create the mesh grid using np.meshgrid
       X, Y = np.meshgrid(x_values, y_values)
@@ -172,17 +174,17 @@ def main():
 
       ################## CALIBRATE THESE VALUES FOR PERSPECTIVE TRANSFORM #######################
       # Bottom Right Corner 
-      # (577, 354)
+      # (606, 353)
       # Top Right Corner 
-      #(462, 270)
+      #(485, 265)
       # Top Left Corner 
-      # (165, 254)
+      # (177, 269)
       # Bottom Left Corner 
-      # (50, 330)
+      # (49, 357)
 
       # Top Left, Top Right, Bot Left, Bot Right
-      orig_pts = np.float32([[165, 254], [462, 270], [50, 330],
-                       [577, 354]])
+      orig_pts = np.float32([[177, 269], [485, 265], [49, 357],
+                       [606, 353]])
       dest_pts = np.float32([[0, 0], [1000, 0], [0, 1000], [1000, 1000]])
 
       ############## SET UP CSV OUTPUT ################
