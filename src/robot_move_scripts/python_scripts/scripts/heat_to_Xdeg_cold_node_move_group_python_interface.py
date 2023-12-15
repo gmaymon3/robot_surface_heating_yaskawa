@@ -667,13 +667,20 @@ def main():
         tutorial.go_to_joint_state()
 
 
+        
+        ######################### ENTER NODE NUMBER HERE ##################
+        node_num = 5
+        ######################### ENTER NODE NUMBER HERE ##################
+        
 
 
         data = temp_subscriber.get_temperature_data()
         data_numpy = np.array(data)
-        reshaped_data = data_numpy.reshape(5, 5)
-        print(reshaped_data)
-        #rospy.loginfo("Accessed temperature data in the main function: {}".format(data))
+        reshaped_data = data_numpy.reshape(node_num+2, node_num+2)
+        heated_nodes_data = reshaped_data[1:-1, 1:-1] # get only the heated nodes 
+        print(heated_nodes_data)
+
+
         
         # Go to home
         #position: 
@@ -712,9 +719,7 @@ def main():
         z_in_min = 0.15
 
 
-        ######################### ENTER NODE NUMBER HERE ##################
-        node_num = 5
-        ######################### ENTER NODE NUMBER HERE ##################
+        #rospy.loginfo("Accessed temperature data in the main function: {}".format(data))
 
         x_home = 0
         y_home = -0.8
@@ -733,16 +738,15 @@ def main():
         y_values = np.arange(y_end, y_start, -y_spacing)
         x_values = np.delete(x_values, 0)
         y_values = np.delete(y_values, 0)
-
         print(x_values)
         print(y_values)
+
 
         # Create the mesh grid using np.meshgrid
         X, Y = np.meshgrid(x_values, y_values)
         num_rows, num_columns = X.shape
         print(num_rows)
         print(num_columns)
-        on_node = 0
 
         start_time = time.time()
         node_cords = [0] * 2
@@ -756,27 +760,37 @@ def main():
             
             data = temp_subscriber.get_temperature_data()
             data_numpy = np.array(data)
-            reshaped_data = data_numpy.reshape(5, 5)
+            reshaped_data = data_numpy.reshape(node_num+2, node_num+2)
+            heated_nodes_data = reshaped_data[1:-1, 1:-1] # get only the heated nodes 
+            print(heated_nodes_data)
+
             # Find the maximum value and its index location
-            low_temp = np.min(reshaped_data)
-            min_index = np.argmin(reshaped_data)
+            low_temp = np.min(heated_nodes_data)
+            min_index = np.argmin(heated_nodes_data)
             # Convert the 1D index to 2D index
-            min_index_2d = np.unravel_index(min_index, reshaped_data.shape)
-            print(reshaped_data)
+            min_index_2d = np.unravel_index(min_index, heated_nodes_data.shape)
+
+            print("The index is: ")
+            print(min_index_2d)
+            #print(x_values)
+            #print(y_values)
+
            
             # Go to random pos (on node position)
             #x_rand = random.randint(0,node_num-1)
             #y_rand = random.randint(0,node_num-1)
-            x_low = min_index_2d[0]
-            y_low = min_index_2d[1]
-            low_temp = reshaped_data[x_low,y_low]
+            
+            x_low = int(min_index_2d[0])
+            y_low = int(min_index_2d[1])
+            low_temp = heated_nodes_data[x_low,y_low]
 
             print(low_temp)
             print(x_low)
             print(y_low)
             node_cords = [x_low+1,y_low+1]                
             x_pos = x_values[x_low]
-            y_pos = y_values[y_low]+0.025
+            y_pos = y_values[y_low]
+            # you may need to add/subtract to the y_pos if camera calibration isnt perfect
             
             z_pos = 0.25
 
@@ -791,12 +805,13 @@ def main():
             rospy.loginfo(message)
             pub.publish(message)
 
-            while low_temp < 100:
+            while low_temp < 110:
                 time.sleep(0.01)
                 data = temp_subscriber.get_temperature_data()
                 data_numpy = np.array(data)
-                reshaped_data = data_numpy.reshape(5, 5)
-                low_temp = reshaped_data[x_low,y_low]
+                reshaped_data = data_numpy.reshape(node_num+2, node_num+2)
+                heated_nodes_data = reshaped_data[1:-1, 1:-1] # get only the heated nodes 
+                low_temp = heated_nodes_data[x_low,y_low]
                 #print(low_temp)
 
         print("============ Python tutorial demo complete!")
